@@ -58,7 +58,7 @@ map.on('locationfound', onLocationFound);
 }
 map.on('locationerror', onLocationError);
 
-  
+
   sidebar = L.control
     .sidebar({
       container: "sidebar",
@@ -223,8 +223,8 @@ function addPoints(data) {
     
     // Αλλαγή γραφικού πινέζας 
     let myIcon = L.icon({
-      iconUrl: 'myIcon.svg',
-      iconSize:  [50, 50],
+      iconUrl: 'myIcon.png',
+      iconSize:  [85, 85],
     });
     
     if (!markerType.includes("circle")) {
