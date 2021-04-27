@@ -189,13 +189,13 @@ function addPoints(data) {
     // COMMENT UNTIL HERE TO DISABLE SIDEBAR FOR THE MARKERS
 
     // AwesomeMarkers is used to create fancier icons
-    let icon = L.AwesomeMarkers.icon({
+    /*let icon = L.AwesomeMarkers.icon({
       icon: "info-circle",
       iconColor: "white",
       markerColor: data[row].color,
       prefix: "fa",
       extraClasses: "fa-rotate-0",
-    });
+    });*/
     
     let myIcon = L.icon({
       iconUrl: 'myIcon.png',
