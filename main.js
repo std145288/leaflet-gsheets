@@ -37,12 +37,14 @@ function init() {
     }
   ).addTo(map);
   
-    map.locate({
+  map.locate({setView: true, maxZoom: 10});
+  
+    /*map.locate({
     watch: true, 
     setView: true, 
     maxZoom: 15,
     enableHighAccuracy: true
-});
+});*/
   
   sidebar = L.control
     .sidebar({
@@ -59,9 +61,7 @@ function init() {
     title: "<h2 id='sidebar-title'>Nothing selected</h2>",
   };
   sidebar.addPanel(panelContent);
-
-
-  
+ 
   
   map.on("click", function () {
     sidebar.close(panelID);
@@ -210,7 +210,7 @@ function addPoints(data) {
     
     let myIcon = L.icon({
       iconUrl: 'myIcon.png',
-      iconSize:  [120, 120],
+      iconSize:  [80, 80],
     });
     
     if (!markerType.includes("circle")) {
