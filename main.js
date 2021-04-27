@@ -196,8 +196,14 @@ function addPoints(data) {
       prefix: "fa",
       extraClasses: "fa-rotate-0",
     });
+    
+    let myIcon = L.icon({
+      iconUrl: 'myIcon.svg',
+      iconSize: [60, 60]
+    });
+    
     if (!markerType.includes("circle")) {
-      marker.setIcon(icon);
+      marker.setIcon(myIcon);
     }
   }
 }
