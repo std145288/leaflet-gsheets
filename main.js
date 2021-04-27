@@ -224,7 +224,7 @@ function addPoints(data) {
     // Αλλαγή γραφικού πινέζας 
     let myIcon = L.icon({
       iconUrl: 'myIcon.png',
-      iconSize:  [85, 85],
+      iconSize:  [50, 50],
     });
     
     if (!markerType.includes("circle")) {
