@@ -223,7 +223,7 @@ function addPoints(data) {
     
     // Αλλαγή γραφικού πινέζας 
     let myIcon = L.icon({
-      iconUrl: 'myIcon.png',
+      iconUrl: 'myIcon.svg',
       iconSize:  [50, 50],
     });
     
