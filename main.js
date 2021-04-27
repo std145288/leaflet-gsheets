@@ -43,8 +43,14 @@ function init() {
  // Popup Μήνυμα επιτυχούς εντοπισμού 
  function onLocationFound(e) {
     var radius = e.accuracy;
+    
+   var locationIcon = L.icon({
+    iconUrl: 'myLocationIcon.png',
+    iconSize:     [60, 60], // size of the icon
 
-    L.marker(e.latlng).addTo(map)
+});   
+
+    L.marker(e.latlng, {icon: locationIcon}).addTo(map)
         .bindPopup("You are within " + radius + " meters from this point").openPopup();
 
     L.circle(e.latlng, radius).addTo(map);
