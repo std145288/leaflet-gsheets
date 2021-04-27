@@ -53,10 +53,19 @@ function init() {
   };
   sidebar.addPanel(panelContent);
 
+  map.locate({
+    watch: true, 
+    setView: true, 
+    maxZoom: 13,
+    enableHighAccuracy: true
+});
+  
+  
   map.on("click", function () {
     sidebar.close(panelID);
   });
 
+  
   // Use PapaParse to load data from Google Sheets
   // And call the respective functions to add those to the map.
   Papa.parse(geomURL, {
