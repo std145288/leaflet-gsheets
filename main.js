@@ -37,8 +37,6 @@ function init() {
     }
   ).addTo(map);
   
-  map.locate({setView: true, maxZoom: 13});
-
   sidebar = L.control
     .sidebar({
       container: "sidebar",
