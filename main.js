@@ -40,7 +40,7 @@ function init() {
     map.locate({
     watch: true, 
     setView: true, 
-    maxZoom: 13,
+    maxZoom: 15,
     enableHighAccuracy: true
 });
   
@@ -209,7 +209,8 @@ function addPoints(data) {
     });*/
     
     let myIcon = L.icon({
-      iconUrl: 'myIcon.png',     
+      iconUrl: 'myIcon.png',
+      iconSize:  [120, 120],
     });
     
     if (!markerType.includes("circle")) {
