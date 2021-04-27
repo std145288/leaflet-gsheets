@@ -43,10 +43,10 @@ function init() {
  // Popup Μήνυμα επιτυχούς εντοπισμού 
  function onLocationFound(e) {
     var radius = e.accuracy;
-    
+  // Αλλαγή εικονιδίου εντοπισμού  
    var locationIcon = L.icon({
     iconUrl: 'myLocationIcon.png',
-    iconSize:     [60, 60], // size of the icon
+    iconSize:     [30, 30], // size of the icon
 
 });   
 
