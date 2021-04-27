@@ -38,7 +38,7 @@ function init() {
   ).addTo(map);
   
  // Εντοπισμός θέσης χρήστη 
-  map.locate({setView: true, maxZoom: 10});
+  map.locate({setView: true, maxZoom: 15});
   
  // Popup Μήνυμα επιτυχούς εντοπισμού 
  function onLocationFound(e) {
