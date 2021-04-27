@@ -24,7 +24,7 @@ let panelID = "my-info-panel";
  */
 function init() {
   // Create a new Leaflet map centered on the continental US
-  map = L.map("map").setView([35.5, 24.0], 14);
+  map = L.map("map").setView([35.5, 24.0], 12);
 
   // This is the Carto Positron basemap
   L.tileLayer(
@@ -37,7 +37,22 @@ function init() {
     }
   ).addTo(map);
   
-  map.locate({setView: true, maxZoom: 10});
+  map.locate({setView: true, maxZoom: 12});
+  function onLocationFound(e) {
+    var radius = e.accuracy;
+
+    L.marker(e.latlng).addTo(map)
+        .bindPopup("You are within " + radius + " meters from this point").openPopup();
+
+    L.circle(e.latlng, radius).addTo(map);
+}
+
+map.on('locationfound', onLocationFound);
+
+  function onLocationError(e) {
+    alert(e.message);
+}
+map.on('locationerror', onLocationError);
   
     /*map.locate({
     watch: true, 
