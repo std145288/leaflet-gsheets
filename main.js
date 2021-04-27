@@ -198,7 +198,7 @@ function addPoints(data) {
     });*/
     
     let myIcon = L.icon({
-      iconUrl: 'myIcon.png',
+      iconUrl: 'myIcon.svg',
       iconSize: [60, 60]
     });
     
