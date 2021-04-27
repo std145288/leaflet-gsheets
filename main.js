@@ -37,8 +37,11 @@ function init() {
     }
   ).addTo(map);
   
-  map.locate({setView: true, maxZoom: 12});
-  function onLocationFound(e) {
+ // Εντοπισμός θέσης χρήστη 
+  map.locate({setView: true, maxZoom: 14});
+  
+ // Popup Μήνυμα επιτυχούς εντοπισμού 
+ function onLocationFound(e) {
     var radius = e.accuracy;
 
     L.marker(e.latlng).addTo(map)
@@ -49,17 +52,11 @@ function init() {
 
 map.on('locationfound', onLocationFound);
 
-  function onLocationError(e) {
+ function onLocationError(e) {
     alert(e.message);
 }
 map.on('locationerror', onLocationError);
-  
-    /*map.locate({
-    watch: true, 
-    setView: true, 
-    maxZoom: 15,
-    enableHighAccuracy: true
-});*/
+
   
   sidebar = L.control
     .sidebar({
