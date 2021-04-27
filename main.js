@@ -209,8 +209,7 @@ function addPoints(data) {
     });*/
     
     let myIcon = L.icon({
-      iconUrl: 'myIcon.png',
-      iconSize: [80, 80],      
+      iconUrl: 'myIcon.png'     
     });
     
     if (!markerType.includes("circle")) {
