@@ -208,8 +208,7 @@ function addPoints(data) {
     
     let myIcon = L.icon({
       iconUrl: 'myIcon.svg',
-      iconSize: [80, 80],
-      iconAnchor:   [5, 10],
+      iconSize: [80, 80]      
     });
     
     if (!markerType.includes("circle")) {
