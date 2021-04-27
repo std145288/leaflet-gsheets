@@ -52,6 +52,7 @@ function init() {
 
 map.on('locationfound', onLocationFound);
 
+ // Μήνυμα σφάλματος εντοπισμού
  function onLocationError(e) {
     alert(e.message);
 }
@@ -220,9 +221,10 @@ function addPoints(data) {
       extraClasses: "fa-rotate-0",
     });*/
     
+    // Αλλαγή γραφικού πινέζας 
     let myIcon = L.icon({
       iconUrl: 'myIcon.png',
-      iconSize:  [80, 80],
+      iconSize:  [50, 50],
     });
     
     if (!markerType.includes("circle")) {
