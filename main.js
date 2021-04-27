@@ -37,6 +37,13 @@ function init() {
     }
   ).addTo(map);
   
+    map.locate({
+    watch: true, 
+    setView: true, 
+    maxZoom: 13,
+    enableHighAccuracy: true
+});
+  
   sidebar = L.control
     .sidebar({
       container: "sidebar",
@@ -53,12 +60,7 @@ function init() {
   };
   sidebar.addPanel(panelContent);
 
-  map.locate({
-    watch: true, 
-    setView: true, 
-    maxZoom: 13,
-    enableHighAccuracy: true
-});
+
   
   
   map.on("click", function () {
@@ -208,7 +210,7 @@ function addPoints(data) {
     
     let myIcon = L.icon({
       iconUrl: 'myIcon.png',
-      iconSize: [80, 80]      
+      iconSize: [80, 80],      
     });
     
     if (!markerType.includes("circle")) {
