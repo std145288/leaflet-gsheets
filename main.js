@@ -223,13 +223,13 @@ function addPoints(data) {
       markerColor: data[row].color,
       prefix: "fa",
       extraClasses: "fa-rotate-0",
-    });*/
+    });
 
-    /*if (!markerType.includes("circle")) {
+    if (!markerType.includes("circle")) {
       marker.setIcon(icon);
     }*/
         
-    // Αλλαγή γραφικού πινέζας https://leafletjs.com/examples/custom-icons/
+    // Αλλαγή γραφικού πινέζας 
     let myIcon = L.icon({
       iconUrl: 'myIcon.png',
       iconSize:  [50, 50],
