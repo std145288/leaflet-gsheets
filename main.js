@@ -143,7 +143,7 @@ function addGeoms(data) {
         click: function (e) {
           // This zooms the map to the clicked geometry
           // Uncomment to enable
-           map.fitBounds(e.target.getBounds());
+          // map.fitBounds(e.target.getBounds());
 
           // if this isn't added, then map.click is also fired!
           L.DomEvent.stopPropagation(e);
@@ -232,7 +232,7 @@ function addPoints(data) {
     // Αλλαγή γραφικού πινέζας https://leafletjs.com/examples/custom-icons/
     let myIcon = L.icon({
       iconUrl: 'myIcon.png',
-      iconSize:  [40, 40],
+      iconSize:  [50, 50],
     });
     marker.setIcon(myIcon);
   }
