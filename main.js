@@ -224,16 +224,17 @@ function addPoints(data) {
       prefix: "fa",
       extraClasses: "fa-rotate-0",
     });*/
-    
+
+    /*if (!markerType.includes("circle")) {
+      marker.setIcon(icon);
+    }*/
+        
     // Αλλαγή γραφικού πινέζας https://leafletjs.com/examples/custom-icons/
     let myIcon = L.icon({
       iconUrl: 'myIcon.png',
       iconSize:  [50, 50],
     });
     marker.setIcon(myIcon);
-    /*if (!markerType.includes("circle")) {
-      marker.setIcon(myIcon);
-    }*/
   }
 }
 
