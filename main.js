@@ -232,7 +232,7 @@ function addPoints(data) {
     // Αλλαγή γραφικού πινέζας https://leafletjs.com/examples/custom-icons/
     let myIcon = L.icon({
       iconUrl: 'myIcon.png',
-      iconSize:  [30, 30],
+      iconSize:  [40, 40],
     });
     marker.setIcon(myIcon);
   }
