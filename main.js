@@ -23,7 +23,7 @@ let panelID = "my-info-panel";
  * init() is called when the page has loaded
  */
 function init() {
-  // Create a new Leaflet map centered on the continental US
+  // Create a new Leaflet map centered on Chania Crete
   map = L.map("map").setView([35.5, 24.0], 12);
 
   // This is the Carto Positron basemap
@@ -46,7 +46,7 @@ function init() {
   // Αλλαγή εικονιδίου εντοπισμού  
     var locationIcon = L.icon({
       iconUrl: 'myLocationIcon.png',
-      iconSize:     [30, 30], // size of the icon
+      iconSize: [30, 30], // size of the icon
 
 });   
 
@@ -232,7 +232,7 @@ function addPoints(data) {
     // Αλλαγή γραφικού πινέζας https://leafletjs.com/examples/custom-icons/
     let myIcon = L.icon({
       iconUrl: 'myIcon.png',
-      iconSize:  [50, 50],
+      iconSize:  [30, 30],
     });
     marker.setIcon(myIcon);
   }
