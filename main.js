@@ -44,9 +44,9 @@ function init() {
  function onLocationFound(e) {
     var radius = e.accuracy;
   // Αλλαγή εικονιδίου εντοπισμού  
-   var locationIcon = L.icon({
-    iconUrl: 'myLocationIcon.png',
-    iconSize:     [30, 30], // size of the icon
+    var locationIcon = L.icon({
+      iconUrl: 'myLocationIcon.png',
+      iconSize:     [30, 30], // size of the icon
 
 });   
 
@@ -63,7 +63,6 @@ map.on('locationfound', onLocationFound);
     alert(e.message);
 }
 map.on('locationerror', onLocationError);
-
 
   sidebar = L.control
     .sidebar({
@@ -86,7 +85,6 @@ map.on('locationerror', onLocationError);
     sidebar.close(panelID);
   });
 
-  
   // Use PapaParse to load data from Google Sheets
   // And call the respective functions to add those to the map.
   Papa.parse(geomURL, {
@@ -227,15 +225,15 @@ function addPoints(data) {
       extraClasses: "fa-rotate-0",
     });*/
     
-    // Αλλαγή γραφικού πινέζας 
+    // Αλλαγή γραφικού πινέζας https://leafletjs.com/examples/custom-icons/
     let myIcon = L.icon({
       iconUrl: 'myIcon.png',
       iconSize:  [50, 50],
     });
-    
-    if (!markerType.includes("circle")) {
+    marker.setIcon(myIcon);
+    /*if (!markerType.includes("circle")) {
       marker.setIcon(myIcon);
-    }
+    }*/
   }
 }
 
