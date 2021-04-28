@@ -38,60 +38,14 @@ function init() {
   ).addTo(map);
   
  // Εντοπισμός θέσης χρήστη 
- // map.locate({setView: true, maxZoom: 14});
-  
-  
-  
-  function onAccuratePositionProgress (e) {
-    console.log(e.accuracy);
-    console.log(e.latlng);
-}
-
-function onAccuratePositionFound (e) {
-    console.log(e.accuracy);
-    console.log(e.latlng);
-}
-
-function onAccuratePositionError (e) {
-    console.log(e.message)
-}
-
-map.on('accuratepositionprogress', onAccuratePositionProgress);
-map.on('accuratepositionfound', onAccuratePositionFound);
-map.on('accuratepositionerror', onAccuratePositionError);
-
-map.findAccuratePosition({
-    maxWait: 15000, // defaults to 10000
-    desiredAccuracy: 30 // defaults to 20
-});
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
- // Popup Μήνυμα επιτυχούς εντοπισμού 
+ map.locate({setView: true, maxZoom: 14});
+   
  function onLocationFound(e) {
     var radius = e.accuracy;
   // Αλλαγή εικονιδίου εντοπισμού  
     var locationIcon = L.icon({
       iconUrl: 'myLocationIcon.png',
       iconSize: [30, 30], // size of the icon
-
 });   
 
     L.marker(e.latlng, {icon: locationIcon}).addTo(map)
